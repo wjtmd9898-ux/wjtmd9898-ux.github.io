@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unreal Engine 5 멀티플레이 게임 — 허승 포트폴리오</title>
+<meta name="description" content="요구사항 명세서(기능 70·비기능 8)와 와이어프레임 9화면으로 개발 기준을 세우고, 서버 지연 때 작업 순서를 다시 짰습니다.">
+<meta name="theme-color" content="#1e1d1b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Serif+KR:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+<a class="back-link" href="../index.html"><span aria-hidden="true">←</span> Index</a>
+<a class="site-header__logo" href="../index.html">Seung Huh</a>
+<span class="pager-count">06 / 13</span>
+</header>
+<main>
+<article class="detail-head">
+<p class="detail-head__eyebrow"><span class="accent">▸ 06</span> · Team Project · PM · 2026</p>
+<h1 class="detail-head__title">Unreal Engine 5<br>멀티플레이 게임</h1>
+<p class="detail-head__sub">UE5 Multiplayer Social Deduction</p>
+<dl class="byline">
+<div><dt>Role</dt><dd>PM · 일정·이슈 관리 — 허승<br><span class="muted">맵 디자인 · UI · 레벨 스트리밍 병행</span></dd></div>
+<div><dt>Team</dt><dd>SSAFY · 6인</dd></div>
+<div><dt>Period</dt><dd>2026.02.23 – 04.03</dd></div>
+<div><dt>Tools</dt><dd>Jira · Scrum · Git 훅</dd></div>
+<div><dt>AI</dt><dd>요구사항 명세서·와이어프레임 정리에 AI 활용</dd></div>
+</dl>
+</article>
+<section class="media" aria-label="문서 넘겨 보기"><div class="pdfv" data-pdfv data-src="../docs/ue5-requirements.pdf" tabindex="-1" >
+<button class="pdfv__btn pdfv__prev" type="button" aria-label="이전 쪽" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<figure class="pdfv__fig">
+<div class="pdfv__stage" role="img" aria-label="A302 요구사항 명세서 v1.0"><span class="pdfv__status">문서를 불러오는 중…</span></div>
+<figcaption class="pdfv__cap"><span>A302 요구사항 명세서 v1.0</span><span><span class="pdfv__now now">01</span> / <span class="pdfv__total">11</span></span></figcaption>
+</figure>
+<button class="pdfv__btn pdfv__next" type="button" aria-label="다음 쪽"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<noscript><p><a href="../docs/ue5-requirements.pdf">PDF 열기</a></p></noscript></section>
+<article class="prose">
+<section>
+<p class="sec__label"><span class="accent">01</span>목표</p>
+<p>6인 팀의 PM으로 Unreal Engine 5 기반 멀티플레이 사회적 추론 게임을 만들었습니다. 기한 안에 핵심 플레이 루프와 멀티플레이 흐름을 시연까지 완성하는 것이 팀 목표였습니다. 맵 디자인·UI·레벨 스트리밍 작업도 함께 맡았습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">02</span>같은 기준</p>
+<p>저는 개발자 5명이 같은 기준을 보게 하는 데 집중했습니다.</p>
+<div class="stats stats--3">
+<div><p class="stat__n">9</p><p class="stat__l">와이어프레임 화면</p></div>
+<div><p class="stat__n">70</p><p class="stat__l">기능 요구사항</p></div>
+<div><p class="stat__n">8</p><p class="stat__l">비기능 요구사항</p></div>
+</div>
+<ul class="facts">
+<li><span class="facts__k">와이어프레임</span>개발 전에 9화면을 그려 화면 흐름과 전환 조건을 맞췄고, 개발 중 바뀐 부분은 다시 반영했습니다.</li>
+<li><span class="facts__k">요구사항 명세서</span>우선순위 기준은 P1(없으면 게임 진행 불가)·P2(핵심 경험에 직접 영향)·P3(품질·운영 편의)로 두었고 항목마다 수용 기준도 붙였습니다.</li>
+<li><span class="facts__k">Jira · 스크럼</span>에픽·스토리·이슈는 Jira로 관리하고 진행 상황과 병목은 스크럼에서 공유했습니다.</li>
+<li><span class="facts__k">Git 훅</span>브랜치 이름에서 뽑은 Jira 이슈 키가 커밋 메시지에 붙는 Git 훅을 직접 만들었습니다.</li>
+</ul>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">03</span>서버가 늦어졌을 때</p>
+<p>개발 중 EC2 서버 지급이 늦어지면서 팀 전체가 서버 디버깅에 묶였습니다. 저는 클라이언트에서 먼저 만들 수 있는 기능과 서버 연동 작업을 나눠 작업 순서를 다시 짰습니다. 서버가 준비된 뒤에는 전체 로직 검증으로 흐름을 넘겼고 매일 각자 할 일을 정리해 팀이 MVP에 집중하게 했습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">04</span>결과</p>
+<p>팀은 기한 안에 핵심 루프와 멀티플레이 흐름을 구현해 최종 시연을 마쳤습니다.</p>
+</section>
+
+
+</article>
+<section class="docs-list" aria-label="문서"><p class="label" style="margin:0 0 18px">Documents · 7</p><div class="doc-row"><span><span class="doc-row__t">A302 요구사항 명세서 v1.0</span><span class="doc-row__m">PDF · 11쪽 · 작성 허승 · AI 활용 · 2026.03.25 · 가린 것 없음(원문에 실명·연락처 없음). 작업 페이지 대표 이미지로 쓸 것(1쪽)</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-requirements">보기</a><a href="../docs/ue5-requirements.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 기획 문서(와이어프레임) v1.0</span><span class="doc-row__m">PDF · 10쪽 · 작성 허승 · AI 활용 · 개발 전에 그린 뒤 구현에 맞춰 고친 최종판 · 가린 것 없음. 노션 원문에 화면 이미지가 없어 원문의 글자 와이어를 그대로 실음. 대표 이미지는 2쪽(화면 목록·전환도)</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-wireframes">보기</a><a href="../docs/ue5-wireframes.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 Jira 운영 규칙</span><span class="doc-row__m">PDF · 2쪽 · A302 팀 컨벤션 문서 · 2026.02–04 · 가린 것 없음. 원문 첫 줄의 외부 참고 글 링크(공개 블로그 글)는 그대로 둠</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-jira-rules">보기</a><a href="../docs/ue5-jira-rules.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 Git 커밋·브랜치 규칙</span><span class="doc-row__m">PDF · 4쪽 · A302 팀 컨벤션 문서 · 2026.02–04 · 가린 것 없음. 예시의 이슈 키(S14P11A402)와 Unity 예시는 원문 그대로</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-git-rules">보기</a><a href="../docs/ue5-git-rules.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 최종 발표 대본</span><span class="doc-row__m">PDF · 3쪽 · 작성·발표 허승 · 2026.03 · 가린 것 없음. 원문은 노션 「내가 작성한 대본」(상위 「최종 발표 준비」 페이지의 코치 피드백·실명은 싣지 않음). 대본이 밝힌 진행 순서대로 소제목 5개를 붙였고 그 사실을 표지에 적음</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-final-script">보기</a><a href="../docs/ue5-final-script.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 ERD v1.0</span><span class="doc-row__m">PDF · 7쪽 · A302 팀 산출물 · 가린 것 없음. 원문의 mermaid 코드를 그림(SVG)으로 그려 넣음. 표지에는 &#x27;A302 팀 산출물&#x27;로 적혀 있음</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-erd">보기</a><a href="../docs/ue5-erd.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">A302 게임 개선점 메모</span><span class="doc-row__m">PDF · 1쪽 · A302 프로젝트 메모 · 작성자 기록 없음 · 가린 것 없음. 노션 원문 제목 「게임 개선점」, 원문과 글자 그대로 일치</span></span><span class="doc-row__a"><a href="../viewer.html?doc=ue5-playtest-notes">보기</a><a href="../docs/ue5-playtest-notes.pdf" download>받기</a></span></div></section>
+<nav class="next-nav" aria-label="이전·다음 작업"><a href="idle-game-churn.html"><span class="label">← 05</span><span>방치형 게임 이탈 분석</span></a><a href="playstation-subscription.html"><span class="label">07 →</span><span>PlayStation 구독 모델 제안</span></a></nav>
+</main>
+<footer class="site-footer">
+<div class="site-footer__about" id="about"><span class="label">About</span>사람이 왜 떠나고 왜 남는지를 다뤄 왔습니다. 그 질문으로 쓴 분석서와 직접 만든 프로토타입을 모았습니다.</div>
+<div id="contact"><span class="label">Contact</span><a href="mailto:wjtmd9898@gmail.com">wjtmd9898@gmail.com</a></div>
+</footer>
+<script src="../assets/js/pdfviewer.js"></script>
+</body>
+</html>

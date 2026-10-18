@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3매치 퍼즐 로그라이크 기획 — 허승 포트폴리오</title>
+<meta name="description" content="5속성 3매치 퍼즐 RPG로 시작한 개인 기획을, 한 판 안에서 코어 재미를 검증하는 로그라이크 MVP로 바꿨습니다. 유물 세 갈래와 MVP 범위, 검증 계획을 정했습니다.">
+<meta name="theme-color" content="#1e1d1b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Serif+KR:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+<a class="back-link" href="../index.html"><span aria-hidden="true">←</span> Index</a>
+<a class="site-header__logo" href="../index.html">Seung Huh</a>
+<span class="pager-count">10 / 13</span>
+</header>
+<main>
+<article class="detail-head">
+<p class="detail-head__eyebrow"><span class="accent">▸ 10</span> · Game Design · 개인 기획 · 2026</p>
+<h1 class="detail-head__title">3매치 퍼즐 로그라이크 기획</h1>
+<p class="detail-head__sub">Match-3 Roguelike — Validation MVP Plan</p>
+<dl class="byline">
+<div><dt>Role</dt><dd>기획 — 허승 (개인 기획)</dd></div>
+<div><dt>Period</dt><dd>2026.06</dd></div>
+<div><dt>Output</dt><dd>노션 기획서 2편 · 수집형 원안 → 로그라이크 검증판</dd></div>
+<div><dt>AI</dt><dd>기획서 작성에 AI 활용</dd></div>
+</dl>
+</article>
+<section class="media" aria-label="문서 넘겨 보기"><div class="pdfv" data-pdfv data-src="../docs/three-match-rpg.pdf" tabindex="-1" >
+<button class="pdfv__btn pdfv__prev" type="button" aria-label="이전 쪽" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<figure class="pdfv__fig">
+<div class="pdfv__stage" role="img" aria-label="3매치 퍼즐 RPG 기획 (수집형 원안)"><span class="pdfv__status">문서를 불러오는 중…</span></div>
+<figcaption class="pdfv__cap"><span>3매치 퍼즐 RPG 기획 (수집형 원안)</span><span><span class="pdfv__now now">01</span> / <span class="pdfv__total">05</span></span></figcaption>
+</figure>
+<button class="pdfv__btn pdfv__next" type="button" aria-label="다음 쪽"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<noscript><p><a href="../docs/three-match-rpg.pdf">PDF 열기</a></p></noscript></section>
+<article class="prose">
+<section>
+<p class="sec__label"><span class="accent">01</span>원안</p>
+<p>3매치 퍼즐의 '맞추는 재미'를 RPG 전투의 타격감과 성장으로 넓히는 개인 기획입니다. 처음에는 수집형 RPG로 잡았습니다.</p>
+<ul class="facts">
+<li><span class="facts__k">전투</span>퍼즐 5색이 5속성입니다. 3매치는 기본 공격, 4매치는 스킬, 5매치는 궁극기입니다. 우월 속성으로 치면 추가 피해가 납니다.</li>
+<li><span class="facts__k">구조</span>도탑형 스테이지에 방치 보상을 붙이고, 속성별 캐릭터 픽업으로 수익을 냅니다.</li>
+<li><span class="facts__k">종료 조건</span>턴 횟수 제한과 시간 제한 가운데 구현과 밸런싱이 쉬운 횟수 제한을 먼저 검토했습니다.</li>
+</ul>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">02</span>방향 전환</p>
+<p>수집형은 메타 시스템이 먼저 있어야 재미를 확인할 수 있습니다. 스펙으로 막힌 판을 뚫으면 퍼즐의 긴장도 약해집니다. 그래서 코어 재미를 한 판 안에서 검증하는 로그라이크로 바꿨습니다.</p>
+<ul class="facts">
+<li><span class="facts__k">성장</span>영구 성장(캐릭터 수집·강화) → 런 안의 빌드업(유물·버프)</li>
+<li><span class="facts__k">재미의 핵심</span>모으고 키우는 맛 → 한 판의 빌드 시너지</li>
+<li><span class="facts__k">BM</span>픽업·방치 보상 → 없음(검증 단계)</li>
+<li><span class="facts__k">검증 난이도</span>높음(메타 시스템 선행) → 낮음(코어 루프만으로 완결)</li>
+</ul>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">03</span>빌드 설계</p>
+<p>층을 깰 때마다 유물·버프 카드를 골라 그 판만의 빌드를 쌓습니다. 유물은 세 갈래로 나눴습니다.</p>
+<ol class="steps">
+<li><span class="steps__n">i</span><span><span class="steps__t">매치 규칙 변형형</span>수치가 아니라 매치·연쇄 규칙 자체를 바꿉니다. 예를 들어 같은 색 4개를 맞추면 옆 한 줄이 그 색으로 바뀝니다.</span></li>
+<li><span class="steps__n">ii</span><span><span class="steps__t">속성·시너지형</span>한 속성에 몰거나 두 속성을 엮을 때 보상이 커집니다.</span></li>
+<li><span class="steps__n">iii</span><span><span class="steps__t">통제권 부여형</span>리롤, 색 변환, 줄 제거로 보드의 무작위성을 '운'이 아니라 '판단'으로 느끼게 합니다. 기획서는 이 설계가 재미의 8할을 좌우한다고 봅니다.</span></li>
+</ol>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">04</span>MVP 범위</p>
+<p>풀 게임 대신 "한 판이 재밌나"만 묻는 최소 단위를 정했습니다.</p>
+<div class="stats">
+<div><p class="stat__n">10층</p><p class="stat__l">단일 런</p></div>
+<div><p class="stat__n">10~15종</p><p class="stat__l">유물·버프 카드</p></div>
+<div><p class="stat__n">5 + 1</p><p class="stat__l">적 5종 · 미니 보스</p></div>
+<div><p class="stat__n">3택 1</p><p class="stat__l">층 클리어 보상</p></div>
+</div>
+<p>영구 성장, 캐릭터 수집, 방치 보상, 빛/암 각성, 모든 BM은 검증 뒤로 미뤘습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">05</span>검증 계획</p>
+<ol class="steps">
+<li><span class="steps__n">i</span><span><span class="steps__t">셀프 플레이 10판</span>만든 사람부터 "한 판 더"가 나오는지 봅니다.</span></li>
+<li><span class="steps__n">ii</span><span><span class="steps__t">외부 테스트</span>주변 5~10명에게 맡기고 이탈 지점과 재시작률을 봅니다.</span></li>
+<li><span class="steps__n">iii</span><span><span class="steps__t">핵심 질문</span>빌드가 맞물리는 쾌감이 실제로 나는지, 무작위성이 운으로 느껴지는지, 죽었을 때 짜증이 나는지 묻습니다.</span></li>
+<li><span class="steps__n">iv</span><span><span class="steps__t">출구</span>코어가 검증되면 BIC Rookie 같은 소규모 인디 트랙 출품을 검토합니다.</span></li>
+</ol>
+</section>
+
+<blockquote class="quote">운으로 풀리지 않는 구간을 그 판에서 쌓은 빌드와 매치 운영으로 돌파하게 하는 것이 핵심입니다.</blockquote>
+</article>
+<section class="docs-list" aria-label="문서"><p class="label" style="margin:0 0 18px">Documents · 2</p><div class="doc-row"><span><span class="doc-row__t">3매치 퍼즐 RPG 기획 (수집형 원안)</span><span class="doc-row__m">PDF · 5쪽 · 기획 허승 · AI 활용 · 노션 기획 페이지를 PDF로 옮긴 판. 첨부 사업계획서 파일과 이미지 1장은 넣지 않음</span></span><span class="doc-row__a"><a href="../viewer.html?doc=three-match-rpg">보기</a><a href="../docs/three-match-rpg.pdf" download>받기</a></span></div>
+<div class="doc-row"><span><span class="doc-row__t">3매치 로그라이크 기획 (검증용 MVP)</span><span class="doc-row__m">PDF · 4쪽 · 기획 허승 · AI 활용 · 노션 기획 페이지를 PDF로 옮긴 판. 가린 것 없음</span></span><span class="doc-row__a"><a href="../viewer.html?doc=three-match-roguelike">보기</a><a href="../docs/three-match-roguelike.pdf" download>받기</a></span></div></section>
+<nav class="next-nav" aria-label="이전·다음 작업"><a href="starseed.html"><span class="label">← 09</span><span>스타시드 리텐션·BM 분석</span></a><a href="genji-org-design.html"><span class="label">11 →</span><span>젠지 이스포츠 조직설계 분석</span></a></nav>
+</main>
+<footer class="site-footer">
+<div class="site-footer__about" id="about"><span class="label">About</span>사람이 왜 떠나고 왜 남는지를 다뤄 왔습니다. 그 질문으로 쓴 분석서와 직접 만든 프로토타입을 모았습니다.</div>
+<div id="contact"><span class="label">Contact</span><a href="mailto:wjtmd9898@gmail.com">wjtmd9898@gmail.com</a></div>
+</footer>
+<script src="../assets/js/pdfviewer.js"></script>
+</body>
+</html>

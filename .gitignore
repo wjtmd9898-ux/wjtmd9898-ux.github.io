@@ -1,0 +1,6 @@
+# 변환 중간 파일(가리기 전 원본 내용이 들어 있음) — 절대 올리지 않는다
+tools/build/
+__pycache__/
+# 가리기 설정 — 가릴 실명 목록과 내 PC 경로가 들어 있다. 공개 저장소에 올리지 않는다
+tools/docs.json
+tools/docs.d/

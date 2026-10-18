@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>방치형 게임 이탈 분석 — 허승 포트폴리오</title>
+<meta name="description" content="유입 104,384명 중 52.6%가 이탈했고 그중 71.4%가 튜토리얼 구간에서 나갔습니다. 원인을 두 가설로 나눠 개선안을 냈습니다.">
+<meta name="theme-color" content="#1e1d1b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Serif+KR:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+<a class="back-link" href="../index.html"><span aria-hidden="true">←</span> Index</a>
+<a class="site-header__logo" href="../index.html">Seung Huh</a>
+<span class="pager-count">05 / 13</span>
+</header>
+<main>
+<article class="detail-head">
+<p class="detail-head__eyebrow"><span class="accent">▸ 05</span> · Analysis · 개인 과제 · 2024</p>
+<h1 class="detail-head__title">방치형 게임<br>이탈 분석</h1>
+<p class="detail-head__sub">Idle Game Churn Analysis</p>
+<dl class="byline">
+<div><dt>Role</dt><dd>데이터 분석·개선안 — 허승 (개인 과제)</dd></div>
+<div><dt>Course</dt><dd>게임BM설계 및 연구 (대학원 과목)</dd></div>
+<div><dt>Data</dt><dd>가상 유저 데이터 · Excel</dd></div>
+<div><dt>Result</dt><dd>과제 만점</dd></div>
+</dl>
+</article>
+<section class="media" aria-label="문서 넘겨 보기"><div class="pdfv" data-pdfv data-src="../docs/idle-game-churn.pdf" tabindex="-1" >
+<button class="pdfv__btn pdfv__prev" type="button" aria-label="이전 쪽" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<figure class="pdfv__fig">
+<div class="pdfv__stage" role="img" aria-label="NFT 방치형 게임 데이터 분석 및 제시"><span class="pdfv__status">문서를 불러오는 중…</span></div>
+<figcaption class="pdfv__cap"><span>NFT 방치형 게임 데이터 분석 및 제시</span><span><span class="pdfv__now now">01</span> / <span class="pdfv__total">08</span></span></figcaption>
+</figure>
+<button class="pdfv__btn pdfv__next" type="button" aria-label="다음 쪽"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<noscript><p><a href="../docs/idle-game-churn.pdf">PDF 열기</a></p></noscript></section>
+<article class="prose">
+<section>
+<p class="sec__label"><span class="accent">01</span>과제</p>
+<p>대학교 4학년 때 들은 대학원 과목 '게임BM설계 및 연구'의 개인 과제입니다. 가상 유저 데이터로 NFT 방치형 게임의 이탈을 분석하고 개선안을 냈습니다. Excel로 유입량, 구간별 이탈 수, 퍼널을 정리했습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">02</span>어디서 떠나는가</p>
+<p>유입 104,384명 중 52.6%인 54,916명이 이탈했고 그중 71.4%가 튜토리얼 구간에서 나갔습니다.</p>
+<div class="stats stats--3">
+<div><p class="stat__n">104,384</p><p class="stat__l">유입 (가상 데이터)</p></div>
+<div><p class="stat__n">52.6%</p><p class="stat__l">전체 이탈률</p></div>
+<div><p class="stat__n">71.4%</p><p class="stat__l">이탈 중 튜토리얼 구간</p></div>
+</div>
+<ul class="facts">
+<li><span class="facts__k">구간별 이탈 유저 수</span>튜토리얼 39,221 · 20011~ 12,272 · 40001~ 2,932 · 50001~ 467 · 60001~ 13 · 70001~ 11</li>
+</ul>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">03</span>왜 떠나는가</p>
+<p>원인은 두 가설로 나눴습니다.</p>
+<ol class="steps">
+<li><span class="steps__n">A</span><span><span class="steps__t">난이도 허들</span>이탈이 가장 많은 20001 스테이지의 난이도. 개선안은 유료 버프 체험입니다.</span></li>
+<li><span class="steps__n">B</span><span><span class="steps__t">지갑 생성 장벽</span>NFT 지갑 생성이라는 진입 장벽. 개선안은 첫 접속 시 자동 지갑 생성입니다.</span></li>
+</ol>
+<p>각 개선안에는 기대효과와 리스크를 함께 적었고, 문제 정의와 개선안의 구체성을 인정받아 과제 만점을 받았습니다.</p>
+</section>
+
+
+</article>
+<section class="docs-list" aria-label="문서"><p class="label" style="margin:0 0 18px">Documents · 1</p><div class="doc-row"><span><span class="doc-row__t">NFT 방치형 게임 데이터 분석 및 제시</span><span class="doc-row__m">PDF · 8쪽 · 분석·작성 허승 (개인 과제) · 표지의 학번을 가린 판 · 가상 데이터</span></span><span class="doc-row__a"><a href="../viewer.html?doc=idle-game-churn">보기</a><a href="../docs/idle-game-churn.pdf" download>받기</a></span></div></section>
+<nav class="next-nav" aria-label="이전·다음 작업"><a href="golfzon-store-analysis.html"><span class="label">← 04</span><span>골프존파크 매장 매출·회원 분석</span></a><a href="ue5-multiplayer.html"><span class="label">06 →</span><span>Unreal Engine 5 멀티플레이 게임</span></a></nav>
+</main>
+<footer class="site-footer">
+<div class="site-footer__about" id="about"><span class="label">About</span>사람이 왜 떠나고 왜 남는지를 다뤄 왔습니다. 그 질문으로 쓴 분석서와 직접 만든 프로토타입을 모았습니다.</div>
+<div id="contact"><span class="label">Contact</span><a href="mailto:wjtmd9898@gmail.com">wjtmd9898@gmail.com</a></div>
+</footer>
+<script src="../assets/js/pdfviewer.js"></script>
+</body>
+</html>

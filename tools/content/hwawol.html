@@ -1,0 +1,36 @@
+<section>
+<p class="sec__label"><span class="accent">01</span>문제</p>
+<p>원작은 점수가 낮을수록 이기는 방식이라 대중 게이머의 직관과 반대였습니다. 그대로 옮기면 처음 하는 사람이 첫 판부터 막힙니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">02</span>기획 판단</p>
+<p>원작의 재미는 살리고 진입 장벽만 낮추려 했습니다. 200점에서 깎여 나가는 차감제로 방향을 뒤집되 '덜 먹기' 전략은 '덜 깎이기'로 살렸습니다. 낮은 카드만 모으면 되는 단조로운 정석에는 화투 역(광·단·고도리 같은 카드 조합)을 더했고, 12,271,512가지 경우(48장 중 6장)에서 딜링 직후 역이 완성될 확률을 계산해 희귀한 역일수록 보너스를 높게 매겼습니다.</p>
+<div class="stats">
+<div><p class="stat__n">200</p><p class="stat__l">점에서 깎이는 차감제</p></div>
+<div><p class="stat__n">13</p><p class="stat__l">종의 역</p></div>
+<div><p class="stat__n">10</p><p class="stat__l">최대 라운드</p></div>
+<div><p class="stat__n">2–4</p><p class="stat__l">인 실시간 대전</p></div>
+</div>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">03</span>튜토리얼</p>
+<p>읽는 설명서로는 조작이 손에 남지 않는다고 보고, 실제 게임판 위에서 직접 조작하며 배우는 9단계 유도형 튜토리얼을 설계했습니다. 9단계 구성과 짚을 오해, 곧 고스톱 경험자가 가져올 오해 6가지는 제가 정했습니다. 문서·대본 작성과 구현은 AI가 맡았습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">04</span>AI와 검증</p>
+<p>팀은 팀원 한 명이 설계한 규약에 따라 회의록 대신 Task 문서로 범위·완료 기준·인계를 남겼습니다. 저는 담당 Task 21건 중 17건에 Claude Code를 작업자로 두었고, 프론트엔드 계열 Task의 완료 승인을 맡았습니다.</p>
+<ul class="facts">
+<li><span class="facts__k">제출 전 수정 1</span>'키보드 입력은 필요 없다' — 실제로는 Tab·Enter로 조작</li>
+<li><span class="facts__k">제출 전 수정 2</span>구현되지 않은 손패 정렬</li>
+<li><span class="facts__k">제출 전 수정 3</span>한 월이 4장뿐이라 일어날 수 없는 '여러 명 동시 뽕'</li>
+</ul>
+<p>튜토리얼 작업 중 AI가 계약에 없는 역 이름 5종을 발견하고 규약대로 작업을 멈춰 보고했습니다. 저는 담당자로서 범위 확장을 승인했고, 그 뒤 AI가 계약·콘텐츠·검증기를 한 번에 정리했습니다.</p>
+</section>
+
+<section>
+<p class="sec__label"><span class="accent">05</span>결과</p>
+<p>팀은 3주 만에 역 13종, 최대 10라운드의 실시간 대전을 웹에 배포했습니다(프로토타입). 플레이 장면은 <a href="https://www.youtube.com/watch?v=xeh1uJQtIJA">영상</a>으로 볼 수 있습니다.</p>
+</section>
