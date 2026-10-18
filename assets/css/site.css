@@ -192,6 +192,86 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .viewer-main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 28px; }
 .viewer-main .pdfv { width: 100%; max-width: 1240px; }
 
+/* ---------- home (첫 화면) ---------- */
+/* 넓은 화면에서는 소개와 숫자를 옆으로, 프로필은 3단으로 펼친다. 좁아지면 차례로 접힌다. */
+.hero {
+  max-width: 1560px; margin: 0 auto; padding: clamp(48px, 7vw, 112px) var(--gutter) clamp(40px, 5vw, 72px);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 40px 72px;
+}
+.hero__eyebrow { margin: 0; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+.hero__title {
+  margin: 22px 0 0; max-width: 21em; font-family: var(--serif-ko); font-weight: 500;
+  font-size: clamp(30px, 3.9vw, 66px); line-height: 1.38; letter-spacing: -0.02em; word-break: keep-all;
+}
+.hero__name { color: var(--accent); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px 14px; margin-top: 36px; }
+.hero__actions .btn-line { margin-top: 0; min-height: 48px; }
+.hero__stats { display: flex; gap: 0; margin: 0; border-top: 1px solid var(--line-2); }
+.hero__stats > div { min-width: 120px; padding: 18px 28px 0 0; }
+.hero__stats > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+.hero__stats dt { font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); }
+.hero__stats dd { margin: 6px 0 0; font-family: var(--serif-en); font-size: 64px; line-height: 1; }
+
+.exhibit { padding: 0 0 clamp(56px, 7vw, 104px); }
+.exhibit__bar {
+  max-width: 1560px; margin: 0 auto 22px; padding: 0 var(--gutter);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; flex-wrap: wrap;
+}
+.exhibit__bar .label { margin: 0; word-break: keep-all; }
+.exhibit__toggle {
+  display: inline-flex; align-items: center; min-height: 38px; padding: 0 16px; border-radius: 999px;
+  box-shadow: inset 0 0 0 1px var(--line-2); font-size: 11px; letter-spacing: 0.1em; color: var(--muted);
+}
+.exhibit__toggle.is-paused { background: var(--fg); color: var(--bg); box-shadow: none; }
+.marquee {
+  --exh: 300px; overflow: hidden; padding: 6px 0 10px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+.marquee__track { display: flex; width: max-content; animation: marquee var(--dur, 240s) linear infinite; }
+.marquee:hover .marquee__track, .marquee:focus-within .marquee__track, .marquee[data-paused] .marquee__track { animation-play-state: paused; }
+/* 키보드로 표지에 들어오면 흐름을 풀어 둬야 브라우저가 초점 간 표지를 화면 안으로 옮긴다(마우스 클릭은 :focus-visible이 아니라 그대로). */
+.marquee:has(a:focus-visible) .marquee__track { animation: none; }
+.marquee__set { display: flex; align-items: flex-start; gap: 32px; margin: 0; padding: 0 16px; list-style: none; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.ex-item { flex: 0 0 auto; width: calc(var(--exh) * var(--r)); }
+.ex-item a { display: flex; flex-direction: column; gap: 6px; }
+.ex-item img {
+  width: 100%; height: var(--exh); object-fit: cover; background: #fff; margin-bottom: 8px;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.5); transition: transform .35s ease, box-shadow .35s ease;
+}
+.ex-item a:hover img, .ex-item a:focus-visible img { transform: translateY(-6px); box-shadow: 0 30px 56px rgba(0, 0, 0, 0.6); }
+.ex-item__meta { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); }
+.ex-item__t {
+  font-family: var(--serif-ko); font-size: 15px; line-height: 1.45; color: var(--fg-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; word-break: keep-all;
+}
+/* '애니메이션 줄이기'를 켠 PC(회사 PC·원격 데스크톱에 흔하다)에서도 전시는 보이게, 대신 두 배 느리게 흐른다. 멈춤 버튼은 그대로. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation-duration: calc(var(--dur, 240s) * 2); }
+  .ex-item img { transition: none; }
+  .ex-item a:hover img, .ex-item a:focus-visible img { transform: none; }
+}
+
+.profile {
+  max-width: 1560px; margin: 0 auto; padding: 0 var(--gutter) clamp(72px, 8vw, 120px);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 56px 56px; align-items: start;
+}
+.profile__col .label { margin: 0 0 6px; font-weight: 400; }
+.profile__sub { margin-top: 48px !important; }
+.pf { display: flex; flex-direction: column; gap: 3px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.profile__col .label + .pf { border-top: 1px solid var(--line-2); }
+.pf__when { font-size: 12px; color: var(--dim); }
+.pf__what { font-size: 15.5px; line-height: 1.5; color: var(--fg); }
+.pf__detail { font-size: 13px; line-height: 1.6; color: var(--muted); }
+.pf__links { display: flex; flex-wrap: wrap; gap: 0 18px; margin-top: 2px; }
+.pf__links a { display: inline-flex; align-items: center; min-height: 40px; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero__stats { justify-self: start; }
+}
+
 /* ---------- footer ---------- */
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px 48px; padding: 28px var(--gutter) 32px; border-top: 1px solid var(--line); font-size: 12.5px; line-height: 1.75; color: var(--muted); }
 .site-footer .label { display: block; margin-bottom: 6px; }
@@ -225,4 +305,11 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .next-nav { grid-template-columns: minmax(0, 1fr); }
   .next-nav a:last-child { align-items: flex-start; text-align: left; }
   .viewer-main { padding: 12px; }
+  .hero__actions .btn-solid, .hero__actions .btn-line { flex: 1 1 auto; justify-content: center; }
+  .hero__stats > div { min-width: 0; padding-right: 18px; }
+  .hero__stats > div + div { padding-left: 18px; }
+  .hero__stats dd { font-size: 44px; }
+  .marquee { --exh: 200px; }
+  .marquee__set { gap: 20px; padding: 0 10px; }
+  .ex-item__t { font-size: 13.5px; }
 }

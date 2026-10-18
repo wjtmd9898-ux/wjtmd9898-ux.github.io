@@ -7,7 +7,7 @@
   "tagline": "Game Business PM — Portfolio Archive",
   "description": "허승(Seung Huh) — 게임 사업 PM 포트폴리오. 분석서·기획서·프로토타입을 모은 자료실.",
   "lede": "Analyses, plans <em>&amp;</em> prototypes — <strong>13 works</strong>",
-  "about": "사람이 왜 떠나고 왜 남는지를 다뤄 왔습니다. 그 질문으로 쓴 분석서와 직접 만든 프로토타입을 모았습니다.",
+  "about": "게임 분석서와 기획·제안서, 팀 프로젝트 문서와 프로토타입을 모은 자료실입니다. 팀 문서의 팀원 이름과 연락처는 가렸습니다.",
   "categories": [
     [
       "analysis",
@@ -846,7 +846,7 @@
     }
   ],
   "profile": {
-    "intro": "사람이 왜 떠나고 왜 남는지를 다뤄 왔습니다. 그 질문으로 쓴 분석서와 직접 만든 프로토타입을 모았습니다.",
+    "headline": "사람이 왜 떠나고 왜 남는지 데이터로 읽고, 막히는 곳을 직접 고쳐 온 지원자 <span class=\"hero__name\">허승</span>입니다.",
     "education": [
       {
         "when": "2025.07.08 – 2026.06.03",

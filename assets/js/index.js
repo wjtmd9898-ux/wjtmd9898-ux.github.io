@@ -48,6 +48,7 @@
   var saved = null;
   try { saved = localStorage.getItem('portfolio-view'); } catch (e) {}
   if (location.hash === '#shelf') saved = 'shelf';
+  if (location.hash === '#list') saved = 'list';
   setView(saved === 'shelf' ? 'shelf' : 'list', false);
 
   /* 표지 보기 거르기 */
